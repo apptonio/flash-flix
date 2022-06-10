@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FlashFlix</string>
+
+    <string name="icon_description">Image of the app icon</string>
+    <string name="about_text">FlashFlix - Made by ab7719</string>
+    <string name="backdrop_description">Backdrop image of the movie</string>
+    <string name="favorite">Favorite</string>
+    <string name="rating">Rating</string>
+    <string name="trending">Trending</string>
+    <string name="original">Original</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="action">Action</string>
+    <string name="comedy">Comedy</string>
+    <string name="horror">Horror</string>
+    <string name="romance">Romance</string>
+    <string name="documentary">Documentary</string>
+
+
+</resources>

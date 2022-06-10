@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.MovieListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_trending"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/rv_trending"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:text="@string/trending"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_trending"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_trending"
+            app:layout_constraintBottom_toTopOf="@id/tv_original"
+            />
+
+        <TextView
+            android:id="@+id/tv_original"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rv_trending"
+            app:layout_constraintBottom_toTopOf="@+id/rv_original"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/original"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_original"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_original"
+            app:layout_constraintBottom_toTopOf="@id/tv_top_rated"
+            />
+
+        <TextView
+            android:id="@+id/tv_top_rated"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rv_original"
+            app:layout_constraintBottom_toTopOf="@+id/rv_top_rated"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/top_rated"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_top_rated"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_top_rated"
+            app:layout_constraintBottom_toTopOf="@+id/tv_action"
+            />
+
+        <TextView
+            android:id="@+id/tv_action"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rv_top_rated"
+            app:layout_constraintBottom_toTopOf="@id/rv_action"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/action"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_action"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_action"
+            app:layout_constraintBottom_toTopOf="@+id/tv_comedy"
+            />
+
+        <TextView
+            android:id="@+id/tv_comedy"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rv_action"
+            app:layout_constraintBottom_toTopOf="@id/rv_comedy"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/comedy"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comedy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_comedy"
+            app:layout_constraintBottom_toTopOf="@+id/tv_horror"
+            />
+
+        <TextView
+            android:id="@+id/tv_horror"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rv_comedy"
+            app:layout_constraintBottom_toTopOf="@id/rv_horror"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/horror"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_horror"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_horror"
+            app:layout_constraintBottom_toTopOf="@+id/tv_romance"
+            />
+
+        <TextView
+            android:id="@+id/tv_romance"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rv_horror"
+            app:layout_constraintBottom_toTopOf="@id/rv_romance"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/romance"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_romance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_romance"
+            app:layout_constraintBottom_toTopOf="@+id/tv_documentary"
+            />
+
+        <TextView
+            android:id="@+id/tv_documentary"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rv_romance"
+            app:layout_constraintBottom_toTopOf="@id/rv_documentary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/documentary"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_documentary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_documentary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

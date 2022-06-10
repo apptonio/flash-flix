@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movieListFragment">
+
+    <fragment
+        android:id="@+id/movieListFragment"
+        android:name="edu.rit.flashflix.ui.fragment.MovieListFragment"
+        android:label="Movie List"
+        tools:layout="@layout/fragment_movie_list" />
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="edu.rit.flashflix.ui.fragment.MovieDetailFragment"
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="movie"
+            app:argType="edu.rit.flashflix.data.model.Movie" />
+    </fragment>
+    <action android:id="@+id/action_global_movieDetailFragment" app:destination="@id/movieDetailFragment" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="edu.rit.flashflix.ui.fragment.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="edu.rit.flashflix.ui.fragment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <action android:id="@+id/action_global_aboutFragment" app:destination="@id/aboutFragment" />
+</navigation>
